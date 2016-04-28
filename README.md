@@ -15,3 +15,7 @@ This playbook deploys an optimized setup for WordPress using MariaDB, nginx, PHP
 ## Example Hosts file
 
 `hosts.example` contains an example host. Just substitute your information, and you should be good to go.
+
+## Credits
+
+Inspired by [tlovett1/wordpress-ansible-playbook](https://github.com/tlovett1/wordpress-ansible-playbook)
