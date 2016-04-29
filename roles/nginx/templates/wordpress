@@ -5,6 +5,13 @@ server {
         root /var/www/html/wordpress/;
  
 	client_max_body_size 64M;
+
+        # Block attack described at https://habrahabr.ru/post/215543/
+        location = /xmlrpc.php {
+            deny all;
+            access_log off; #to prevent from filling up the access log file
+            error_log off; #to prevent from filling up the error log file
+        }
  
 	# Deny access to any files with a .php extension in the uploads directory
         location ~* /(?:uploads|files)/.*\.php$ {
